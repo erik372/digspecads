@@ -21,9 +21,7 @@ library("conflicted")
 conflict_prefer("filter", "dplyr")
 conflict_prefer("fromJSON","jsonlite")
 conflict_prefer("flatten","jsonlite")
-
-# Spara dagens datum i objekt
-dagensdatum <- Sys.Date()
+conflict_prefer("lag", "dplyr")
 
 # Ställ in arbetskatalog
 # Detta kommando definierar arbetskatalogen till den katalog där detta skript är sparat
@@ -58,7 +56,7 @@ remove_pattern_data <- str_c(read_xlsx("ordlistor textanalys.xlsx",
 
 # Sentimentlista för sociala kompetenser
 sentimentwords <- read_xlsx("ordlistor textanalys.xlsx", 
-                            sheet="sentiments")
+                            sheet="sentiment")
   
 # Sammanfoga sentimentlistan med ordlistorna
 ordlista_data <- ordlista_data %>% full_join(sentimentwords %>% 

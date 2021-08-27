@@ -14,9 +14,7 @@ library("conflicted")
 conflict_prefer("filter", "dplyr")
 conflict_prefer("fromJSON","jsonlite")
 conflict_prefer("flatten","jsonlite")
-
-# Today's date
-dagensdatum <- Sys.Date()
+conflict_prefer("lag", "dplyr")
 
 
 # Ställ in arbetskatalog
@@ -103,7 +101,7 @@ all_data_unnested$year %>% unique
 ###############################################################################
 setwd(arbetskatalog)
 all_data_unnested %>% 
-  write_rds(file=paste0("all_data_unnested_",dagensdatum,".rds"), compress='gz')
+  write_rds(file="all_data_unnested.rds", compress='gz')
 
 
 

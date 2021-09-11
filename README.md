@@ -1,6 +1,7 @@
 # digspecads
 Analys av jobbannonser 2006-2020 rörande digital spetskompetens inom ramen för ett regeringsuppdrag till Tillväxtverket och Universitetskanslersämbetet. Data från Arbetsförmedlingen (JobTechDev) över historiska jobb
 https://jobtechdev.se/sv/produkter/historical-jobs
+och
 https://github.com/JobtechSwe/getting-started-code-examples/tree/master/historiska/data
 
 Data för att rita kartor med kommungränser
